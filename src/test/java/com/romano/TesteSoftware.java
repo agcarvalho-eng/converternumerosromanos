@@ -1,7 +1,7 @@
 package com.romano;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 
 public class TesteSoftware {
@@ -80,10 +80,6 @@ public class TesteSoftware {
         // Teste para verificar se um valor decimal é maior que o maior valor correspondente em algarismos romanos
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> ConverterRomano.decimalParaRomano(4000));
         assertEquals("Número decimal maior que 3999.", exception.getMessage());
-    }
-
-    private IllegalArgumentException assertThrows(Class<IllegalArgumentException> class1, Object object) {
-        return null;
     }
 
 }
