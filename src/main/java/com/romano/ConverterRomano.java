@@ -1,9 +1,12 @@
+/**
+ * Programa para realizar a conversão de números decimais para romanos e
+ * vice-versa (intervalo perminitod de 1 a 3998).
+ */
 package com.romano;
-
 import java.util.Scanner;
 
 /**
- * Classe para realizar a conversão entre numerais Romanos e Decimais.
+ * Classe para realizar a conversão entre numerais romanos e decimais.
  */
 public class ConverterRomano {
     private static final String[] numeraisRomanos = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
