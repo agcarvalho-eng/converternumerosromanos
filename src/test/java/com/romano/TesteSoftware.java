@@ -1,5 +1,5 @@
 /**Programa para realizar o teste de funcionamento do ConverterRomano.java
- * Várias possibilidades são testadas.
+ * Várias possibilidades são testadas para diversos números.
  */
 package com.romano;
 
