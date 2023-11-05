@@ -1,3 +1,6 @@
+/**Programa para realizar o teste de funcionamento do ConverterRomano.java
+ * Várias possibilidades são testadas.
+ */
 package com.romano;
 
 import static org.junit.jupiter.api.Assertions.*;
