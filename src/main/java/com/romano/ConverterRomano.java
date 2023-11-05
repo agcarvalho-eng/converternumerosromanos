@@ -1,6 +1,6 @@
 /**
  * Programa para realizar a conversão de números decimais para romanos e
- * vice-versa (intervalo perminitod de 1 a 3998).
+ * vice-versa (intervalo permitido para a conversão de 1 a 3998).
  */
 package com.romano;
 import java.util.Scanner;
