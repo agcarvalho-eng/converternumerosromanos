@@ -72,14 +72,14 @@ public class TesteSoftware {
     public void testeValorZero() {
         // Teste para verificar se um valor decimal zero não pode ser convertido para romano.
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> ConverterRomano.decimalParaRomano(0));
-        assertEquals("Número decimal igual a zero.", exception.getMessage());
+        assertEquals("O número informado deve estar contido no intervalo entre 0 e 3999.", exception.getMessage());
     }
 
     @Test
     public void testeMaiorValorDecimal() {
         // Teste para verificar se um valor decimal é maior que o maior valor correspondente em algarismos romanos
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> ConverterRomano.decimalParaRomano(4000));
-        assertEquals("Número decimal maior que 3999.", exception.getMessage());
+        assertEquals("O número informado deve estar contido no intervalo entre 0 e 3999.", exception.getMessage());
     }
 
 }

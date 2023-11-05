@@ -21,6 +21,7 @@ public class ConverterRomano {
             int decimal = scanner.nextInt();
             String romano = decimalParaRomano(decimal);
             System.out.println("Número Romano: " + romano);
+
         } else if (escolha == 2) {
             System.out.print("Digite um número Romano: ");
             String romano = scanner.next();
@@ -37,23 +38,26 @@ public class ConverterRomano {
         scanner.close();
     }
 
+
     //Método para converter Decimal para Romano.
-    public static String decimalParaRomano(int decimal) {
-        if (decimal <= 0 || decimal > 3999) {
-            return "Não é possível converter o número decimal informado para algarismos romanos.";
+    public static String decimalParaRomano(int numeroDecimal) {
+        StringBuilder romano = new StringBuilder();
+        if (numeroDecimal > 0 && numeroDecimal < 3999) {
+            for (int i = 0; i < numeraisRomanos.length; i++) {
+                if (numeroDecimal != 0) {
+                    while (numeroDecimal >= numeraisDecimais[i]) {
+                        romano.append(numeraisRomanos[i]);
+                        numeroDecimal -= numeraisDecimais[i];
+                    }
+                } else {
+                    break;
+                }
+            }
+            return romano.toString();
+        }else {
+            throw new IllegalArgumentException("O número informado deve estar contido no intervalo entre 0 e 3999.");
         }
 
-        StringBuilder romano = new StringBuilder();
-        int i = 0;
-        while (decimal > 0) {
-            if (decimal >= numeraisDecimais[i]) {
-                romano.append(numeraisRomanos[i]);
-                decimal -= numeraisDecimais[i];
-            } else {
-                i++;
-            }
-        }
-        return romano.toString();
     }
 
     //Método para converter Romano para Decimal.
